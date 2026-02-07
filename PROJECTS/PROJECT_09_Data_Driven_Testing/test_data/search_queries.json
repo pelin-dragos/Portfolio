@@ -1,0 +1,28 @@
+[
+  {
+    "query": "python",
+    "expected_min_results": 5,
+    "description": "Search for Python programming language"
+  },
+  {
+    "query": "selenium",
+    "expected_min_results": 3,
+    "description": "Search for Selenium automation"
+  },
+  {
+    "query": "pytest",
+    "expected_min_results": 4,
+    "description": "Search for pytest testing framework"
+  },
+  {
+    "query": "automation",
+    "expected_min_results": 5,
+    "description": "Search for test automation"
+  },
+  {
+    "query": "webdriver",
+    "expected_min_results": 3,
+    "description": "Search for WebDriver"
+  }
+]
+

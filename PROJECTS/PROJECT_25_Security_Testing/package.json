@@ -1,0 +1,36 @@
+{
+  "name": "project-25-security-testing",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite for security testing",
+  "scripts": {
+    "test": "playwright test",
+    "test:security": "playwright test --grep @security",
+    "test:headers": "playwright test --grep @headers",
+    "test:https": "playwright test --grep @https",
+    "test:xss": "playwright test --grep @xss",
+    "test:sql": "playwright test --grep @sql",
+    "test:csrf": "playwright test --grep @csrf",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "security-testing",
+    "xss",
+    "sql-injection",
+    "security-headers",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}

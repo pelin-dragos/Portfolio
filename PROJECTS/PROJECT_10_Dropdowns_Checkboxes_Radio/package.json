@@ -1,0 +1,33 @@
+{
+  "name": "project-10-dropdowns-checkboxes-radio",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite for form elements testing (dropdowns, checkboxes, radio buttons)",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:dropdown": "playwright test --grep @dropdown",
+    "test:checkbox": "playwright test --grep @checkbox",
+    "test:radio": "playwright test --grep @radio",
+    "test:form-elements": "playwright test --grep @form_elements"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "form-elements",
+    "dropdowns",
+    "checkboxes",
+    "radio-buttons",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}
+

@@ -1,0 +1,22 @@
+Performance Test Report
+==================================================
+
+Summary:
+  Total Tests: 1
+  Passed: 1
+  Failed: 0
+
+Results:
+--------------------------------------------------
+
+Test: smoke_performance_test
+Status: PASSED
+Timestamp: 2026-01-08T13:14:03.813Z
+
+Metrics:
+  Page Load Time: NaNs
+  Network Total Time: NaNs
+  DNS: 0.01s
+  TCP: 0.08s
+  Response: 0.00s
+

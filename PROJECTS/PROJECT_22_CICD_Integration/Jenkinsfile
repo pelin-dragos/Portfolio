@@ -1,0 +1,116 @@
+pipeline {
+    agent any
+    
+    environment {
+        NODE_VERSION = '20'
+        PROJECT_DIR = 'PROJECTS/PROJECT_22_CICD_Integration'
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        
+        stage('Setup Node.js') {
+            steps {
+                script {
+                    if (isUnix()) {
+                        sh '''
+                            nvm install ${NODE_VERSION}
+                            nvm use ${NODE_VERSION}
+                        '''
+                    } else {
+                        bat '''
+                            echo Node.js setup for Windows
+                        '''
+                    }
+                }
+            }
+        }
+        
+        stage('Install Dependencies') {
+            steps {
+                dir(env.PROJECT_DIR) {
+                    script {
+                        if (isUnix()) {
+                            sh 'npm ci'
+                        } else {
+                            bat 'npm ci'
+                        }
+                    }
+                }
+            }
+        }
+        
+        stage('Install Playwright Browsers') {
+            steps {
+                dir(env.PROJECT_DIR) {
+                    script {
+                        if (isUnix()) {
+                            sh 'npx playwright install --with-deps chromium'
+                        } else {
+                            bat 'npx playwright install --with-deps chromium'
+                        }
+                    }
+                }
+            }
+        }
+        
+        stage('Run Tests') {
+            steps {
+                dir(env.PROJECT_DIR) {
+                    script {
+                        if (isUnix()) {
+                            sh 'npm run test:ci'
+                        } else {
+                            bat 'npm run test:ci'
+                        }
+                    }
+                }
+            }
+        }
+        
+        stage('Generate Reports') {
+            steps {
+                dir(env.PROJECT_DIR) {
+                    script {
+                        if (isUnix()) {
+                            sh 'npx playwright show-report || true'
+                        } else {
+                            bat 'npx playwright show-report || true'
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    post {
+        always {
+            archiveArtifacts artifacts: '${PROJECT_DIR}/test-results/**/*', fingerprint: true
+            archiveArtifacts artifacts: '${PROJECT_DIR}/playwright-report/**/*', fingerprint: true
+            publishHTML([
+                reportDir: '${PROJECT_DIR}/playwright-report',
+                reportFiles: 'index.html',
+                reportName: 'Playwright Test Report',
+                keepAll: true
+            ])
+        }
+        failure {
+            emailext (
+                subject: "Test Execution Failed: ${env.JOB_NAME} - ${env.BUILD_NUMBER}",
+                body: "Test execution failed. Please check the build logs.",
+                to: "${env.CHANGE_AUTHOR_EMAIL ?: 'team@example.com'}"
+            )
+        }
+        success {
+            emailext (
+                subject: "Test Execution Passed: ${env.JOB_NAME} - ${env.BUILD_NUMBER}",
+                body: "All tests passed successfully.",
+                to: "${env.CHANGE_AUTHOR_EMAIL ?: 'team@example.com'}"
+            )
+        }
+    }
+}

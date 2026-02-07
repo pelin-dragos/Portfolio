@@ -1,0 +1,30 @@
+{
+  "name": "project-23-headless-docker",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite with Docker and headless execution",
+  "scripts": {
+    "test": "playwright test",
+    "test:headless": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:docker": "playwright test --reporter=html,junit,list",
+    "install:browsers": "playwright install --with-deps chromium",
+    "report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "docker",
+    "headless",
+    "containerization",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}

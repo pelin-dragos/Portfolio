@@ -1,0 +1,12 @@
+node_modules
+dist
+playwright-report
+test-results
+screenshots
+logs
+.git
+.gitignore
+*.md
+.DS_Store
+.vscode
+.idea

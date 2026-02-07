@@ -1,0 +1,32 @@
+{
+  "name": "project-07-dynamic-content-testing",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite for dynamic content testing (AJAX, infinite scroll, lazy loading)",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:ajax": "playwright test --grep @ajax",
+    "test:infinite-scroll": "playwright test --grep @infinite_scroll",
+    "test:lazy-loading": "playwright test --grep @lazy_loading",
+    "test:wait-strategy": "playwright test --grep @wait_strategy"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "dynamic-content",
+    "ajax",
+    "infinite-scroll",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}
+

@@ -1,0 +1,30 @@
+{
+  "name": "project-02-form-validation",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite for form validation (email, phone, required fields, password)",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:email": "playwright test tests/test_email_validation.spec.ts",
+    "test:phone": "playwright test tests/test_phone_validation.spec.ts",
+    "test:required": "playwright test tests/test_required_fields.spec.ts",
+    "test:password": "playwright test tests/test_password_validation.spec.ts"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "form-validation",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}
+

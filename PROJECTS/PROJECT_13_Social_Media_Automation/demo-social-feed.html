@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Social Media Feed - Testing Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f0f2f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .feed-container {
+            margin-top: 20px;
+        }
+
+        .post {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            transition: box-shadow 0.2s;
+        }
+
+        .post:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .author {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .author-name {
+            font-weight: bold;
+            color: #1a1a1a;
+            font-size: 16px;
+        }
+
+        .post-content {
+            margin: 15px 0;
+            color: #333;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .post-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: white;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background: #f5f5f5;
+        }
+
+        .like-btn {
+            color: #666;
+        }
+
+        .like-btn.liked {
+            background: #e74c3c;
+            color: white;
+            border-color: #e74c3c;
+        }
+
+        .follow-btn {
+            color: #1877f2;
+            border-color: #1877f2;
+        }
+
+        .follow-btn.followed {
+            background: #1877f2;
+            color: white;
+        }
+
+        .post-info {
+            font-size: 12px;
+            color: #999;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .scroll-indicator {
+            text-align: center;
+            padding: 20px;
+            color: #999;
+            font-style: italic;
+        }
+
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .note strong {
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Demo Social Media Feed</h1>
+        
+        <div class="note">
+            <strong>⚠️ Notă:</strong> Această pagină este creată pentru testare automatizată cu Selenium. 
+            Folosește-o pentru a testa funcționalitățile de like/unlike și follow/unfollow.
+        </div>
+
+        <div class="feed-container" data-testid="feed-container">
+            <!-- Post 1 -->
+            <div class="post" data-post-id="1" data-testid="post-item">
+                <div class="author">
+                    <span class="author-name">@tech_enthusiast</span>
+                    <button class="follow-btn" onclick="toggleFollow(this)" aria-label="Follow">
+                        Follow
+                    </button>
+                </div>
+                <div class="post-content">
+                    🚀 Excited to share my latest project on automation testing with Selenium! 
+                    The possibilities are endless when it comes to web automation.
+                </div>
+                <div class="post-actions">
+                    <button class="like-btn" onclick="toggleLike(this)" aria-label="Like">
+                        Like ❤️
+                    </button>
+                </div>
+                <div class="post-info">
+                    Posted 2 hours ago • <span class="likes-count">0</span> likes
+                </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="post" data-post-id="2" data-testid="post-item">
+                <div class="author">
+                    <span class="author-name">@coding_master</span>
+                    <button class="follow-btn" onclick="toggleFollow(this)" aria-label="Follow">
+                        Follow
+                    </button>
+                </div>
+                <div class="post-content">
+                    Just discovered an amazing open-source testing framework! 
+                    The community support is incredible. Always learning something new! 💡
+                </div>
+                <div class="post-actions">
+                    <button class="like-btn" onclick="toggleLike(this)" aria-label="Like">
+                        Like ❤️
+                    </button>
+                </div>
+                <div class="post-info">
+                    Posted 5 hours ago • <span class="likes-count">0</span> likes
+                </div>
+            </div>
+
+            <!-- Post 3 -->
+            <div class="post" data-post-id="3" data-testid="post-item">
+                <div class="author">
+                    <span class="author-name">@web_dev_pro</span>
+                    <button class="follow-btn" onclick="toggleFollow(this)" aria-label="Follow">
+                        Follow
+                    </button>
+                </div>
+                <div class="post-content">
+                    Page Object Pattern in test automation = Game changer! 
+                    Makes tests more maintainable and readable. Highly recommend! 🎯
+                </div>
+                <div class="post-actions">
+                    <button class="like-btn" onclick="toggleLike(this)" aria-label="Like">
+                        Like ❤️
+                    </button>
+                </div>
+                <div class="post-info">
+                    Posted 1 day ago • <span class="likes-count">0</span> likes
+                </div>
+            </div>
+
+            <!-- Post 4 -->
+            <div class="post" data-post-id="4" data-testid="post-item">
+                <div class="author">
+                    <span class="author-name">@qa_expert</span>
+                    <button class="follow-btn" onclick="toggleFollow(this)" aria-label="Follow">
+                        Follow
+                    </button>
+                </div>
+                <div class="post-content">
+                    Human-like behavior in automation testing is crucial for avoiding detection. 
+                    Random delays and natural mouse movements make a huge difference! 🤖
+                </div>
+                <div class="post-actions">
+                    <button class="like-btn" onclick="toggleLike(this)" aria-label="Like">
+                        Like ❤️
+                    </button>
+                </div>
+                <div class="post-info">
+                    Posted 2 days ago • <span class="likes-count">0</span> likes
+                </div>
+            </div>
+
+            <!-- Post 5 -->
+            <div class="post" data-post-id="5" data-testid="post-item">
+                <div class="author">
+                    <span class="author-name">@selenium_guru</span>
+                    <button class="follow-btn" onclick="toggleFollow(this)" aria-label="Follow">
+                        Follow
+                    </button>
+                </div>
+                <div class="post-content">
+                    Best practices for Selenium automation: 
+                    1. Use explicit waits
+                    2. Page Object Pattern
+                    3. Human-like delays
+                    4. Proper error handling
+                    
+                    What would you add? 💬
+                </div>
+                <div class="post-actions">
+                    <button class="like-btn" onclick="toggleLike(this)" aria-label="Like">
+                        Like ❤️
+                    </button>
+                </div>
+                <div class="post-info">
+                    Posted 3 days ago • <span class="likes-count">0</span> likes
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            👆 Scroll down pentru a simula lazy loading (pentru testare)
+        </div>
+    </div>
+
+    <script>
+        let likesCount = {};
+        
+        function toggleLike(btn) {
+            const post = btn.closest('.post');
+            const postId = post.getAttribute('data-post-id');
+            const likesCountElement = post.querySelector('.likes-count');
+            
+            btn.classList.toggle('liked');
+            const isLiked = btn.classList.contains('liked');
+            
+            if (isLiked) {
+                likesCount[postId] = (likesCount[postId] || 0) + 1;
+                btn.textContent = 'Unlike ❤️';
+                btn.setAttribute('aria-label', 'Unlike');
+            } else {
+                likesCount[postId] = Math.max(0, (likesCount[postId] || 1) - 1);
+                btn.textContent = 'Like ❤️';
+                btn.setAttribute('aria-label', 'Like');
+            }
+            
+            likesCountElement.textContent = likesCount[postId] || 0;
+        }
+        
+        function toggleFollow(btn) {
+            btn.classList.toggle('followed');
+            const isFollowed = btn.classList.contains('followed');
+            
+            if (isFollowed) {
+                btn.textContent = 'Unfollow';
+                btn.setAttribute('aria-label', 'Unfollow');
+            } else {
+                btn.textContent = 'Follow';
+                btn.setAttribute('aria-label', 'Follow');
+            }
+        }
+        
+        // Initialize likes count
+        document.querySelectorAll('.post').forEach(post => {
+            const postId = post.getAttribute('data-post-id');
+            likesCount[postId] = 0;
+        });
+    </script>
+</body>
+</html>
+

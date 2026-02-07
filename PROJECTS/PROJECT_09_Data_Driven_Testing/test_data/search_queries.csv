@@ -1,0 +1,7 @@
+query,expected_min_results,description
+python,5,Search for Python programming language
+selenium,3,Search for Selenium automation
+pytest,4,Search for pytest testing framework
+automation,5,Search for test automation
+webdriver,3,Search for WebDriver
+

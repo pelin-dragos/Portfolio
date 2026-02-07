@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  playwright-tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: playwright-tests-container
+    volumes:
+      # Mount project code
+      - .:/app
+      # Mount results directory
+      - ./test-results:/app/test-results
+      - ./playwright-report:/app/playwright-report
+      - ./screenshots:/app/screenshots
+      - ./logs:/app/logs
+    environment:
+      - CI=true
+      - DOCKER=true
+      - HEADLESS=true
+      - BASE_URL=https://www.saucedemo.com
+      - NODE_ENV=production
+    networks:
+      - playwright-network
+    # Run tests
+    command: npm run test:docker
+    restart: "no"
+
+networks:
+  playwright-network:
+    driver: bridge
+
+volumes:
+  test-results:
+  playwright-report:
+  screenshots:
+  logs:

@@ -1,0 +1,31 @@
+{
+  "name": "project-24-performance-testing",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite for performance testing",
+  "scripts": {
+    "test": "playwright test",
+    "test:performance": "playwright test --grep @performance",
+    "test:page-load": "playwright test --grep @page-load",
+    "test:network": "playwright test --grep @network",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "performance-testing",
+    "metrics",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}

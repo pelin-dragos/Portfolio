@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Playwright
+playwright-report/
+test-results/
+playwright/.cache/
+
+# TypeScript
+dist/
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Screenshots (if you want to keep them, remove this line)
+screenshots/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local

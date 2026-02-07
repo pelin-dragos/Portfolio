@@ -1,0 +1,33 @@
+{
+  "name": "project-13-social-media-automation",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite for social media automation with human-like behavior",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:login": "playwright test --grep @login",
+    "test:feed": "playwright test --grep @feed",
+    "test:like": "playwright test --grep @like",
+    "test:follow": "playwright test --grep @follow",
+    "test:post": "playwright test --grep @post"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "social-media",
+    "human-behavior",
+    "anti-detection",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}
+

@@ -1,0 +1,32 @@
+{
+  "name": "project-11-iframe-handling",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite for iframe handling and testing",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:iframe": "playwright test --grep @iframe",
+    "test:frame-switching": "playwright test --grep @frame_switching",
+    "test:nested-frames": "playwright test --grep @nested_frames",
+    "test:frame-interaction": "playwright test --grep @frame_interaction"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "iframe",
+    "frames",
+    "nested-frames",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}
+

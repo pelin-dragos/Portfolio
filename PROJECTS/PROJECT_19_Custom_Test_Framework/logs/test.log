@@ -1,0 +1,103 @@
+[2026-01-08T12:46:27.010Z] [INFO] Starting Custom Framework Demo Tests
+[2026-01-08T12:46:27.013Z] [INFO] Browser: chrome
+[2026-01-08T12:46:27.015Z] [INFO] Base URL: https://www.saucedemo.com
+[2026-01-08T12:46:27.018Z] [INFO] Starting Custom Framework Demo Tests
+[2026-01-08T12:46:27.022Z] [INFO] Browser: chrome
+[2026-01-08T12:46:27.024Z] [INFO] Base URL: https://www.saucedemo.com
+[2026-01-08T12:46:27.048Z] [INFO] Starting Custom Framework Demo Tests
+[2026-01-08T12:46:27.051Z] [INFO] Browser: chrome
+[2026-01-08T12:46:27.053Z] [INFO] Base URL: https://www.saucedemo.com
+[2026-01-08T12:46:27.055Z] [INFO] Starting Custom Framework Demo Tests
+[2026-01-08T12:46:27.058Z] [INFO] Browser: chrome
+[2026-01-08T12:46:27.059Z] [INFO] Base URL: https://www.saucedemo.com
+[2026-01-08T12:46:27.071Z] [INFO] Info message from Logger
+[2026-01-08T12:46:27.073Z] [INFO] Available browsers: chrome, chromium, firefox, webkit, safari
+[2026-01-08T12:46:27.073Z] [DEBUG] Debug message from Logger
+[2026-01-08T12:46:27.076Z] [WARN] Warning message from Logger
+[2026-01-08T12:46:27.075Z] [INFO] Starting Custom Framework Demo Tests
+[2026-01-08T12:46:27.078Z] [ERROR] Error message from Logger
+[2026-01-08T12:46:27.079Z] [INFO] Browser: chrome
+[2026-01-08T12:46:27.081Z] [INFO] Base URL: https://www.saucedemo.com
+[2026-01-08T12:46:27.088Z] [INFO] Starting Custom Framework Demo Tests
+[2026-01-08T12:46:27.091Z] [INFO] Browser: chrome
+[2026-01-08T12:46:27.093Z] [INFO] Base URL: https://www.saucedemo.com
+[2026-01-08T12:46:27.110Z] [DEBUG] Random string: nBviebb1Yr
+[2026-01-08T12:46:27.113Z] [DEBUG] Random email: test_Jxr808JT@example.com
+[2026-01-08T12:46:27.116Z] [DEBUG] Formatted duration: 2m 5.50s
+[2026-01-08T12:46:27.118Z] [DEBUG] Timestamp: 2026-01-08T12:46:27.117Z
+[2026-01-08T12:46:27.123Z] [INFO] Starting Custom Framework Demo Tests
+[2026-01-08T12:46:27.122Z] [INFO] Starting Custom Framework Demo Tests
+[2026-01-08T12:46:27.125Z] [INFO] Browser: chrome
+[2026-01-08T12:46:27.125Z] [INFO] Browser: chrome
+[2026-01-08T12:46:27.127Z] [INFO] Base URL: https://www.saucedemo.com
+[2026-01-08T12:46:27.127Z] [INFO] Base URL: https://www.saucedemo.com
+[2026-01-08T12:46:27.357Z] [INFO] Navigating to: https://www.saucedemo.com
+[2026-01-08T12:46:27.358Z] [INFO] ConfigManager test - Browser: chrome, URL: https://www.saucedemo.com
+[2026-01-08T12:46:27.361Z] [INFO] Navigating to: https://www.saucedemo.com
+[2026-01-08T12:46:27.417Z] [INFO] Navigating to: https://www.saucedemo.com
+[2026-01-08T12:46:27.470Z] [INFO] Navigating to: https://www.saucedemo.com
+[2026-01-08T12:46:27.880Z] [DEBUG] Filling field: #user-name with text: standard_user
+[2026-01-08T12:46:27.885Z] [DEBUG] Generated random string: 6Uu64KCg
+[2026-01-08T12:46:27.887Z] [DEBUG] Filling field: #user-name with text: standard_user
+[2026-01-08T12:46:27.903Z] [DEBUG] Filling field: #password with text: secret_sauce
+[2026-01-08T12:46:27.919Z] [DEBUG] Clicking element: #login-button
+[2026-01-08T12:46:27.919Z] [DEBUG] Filling field: #password with text: secret_sauce
+[2026-01-08T12:46:27.934Z] [DEBUG] Clicking element: #login-button
+[2026-01-08T12:46:27.975Z] [INFO] BasePage template method test - URL: https://www.saucedemo.com/
+[2026-01-08T12:46:27.998Z] [INFO] Test completed in: 0.64s
+[2026-01-08T12:46:28.008Z] [INFO] Report Summary: {"total":1,"passed":1,"failed":0,"skipped":0,"duration":0.587}
+[2026-01-08T12:46:41.665Z] [INFO] Starting Custom Framework Demo Tests
+[2026-01-08T12:46:41.668Z] [INFO] Browser: chrome
+[2026-01-08T12:46:41.670Z] [INFO] Base URL: https://www.saucedemo.com
+[2026-01-08T12:46:41.687Z] [INFO] Starting Custom Framework Demo Tests
+[2026-01-08T12:46:41.690Z] [INFO] Browser: chrome
+[2026-01-08T12:46:41.692Z] [INFO] Base URL: https://www.saucedemo.com
+[2026-01-08T12:46:41.698Z] [INFO] Starting Custom Framework Demo Tests
+[2026-01-08T12:46:41.701Z] [INFO] Browser: chrome
+[2026-01-08T12:46:41.703Z] [INFO] Base URL: https://www.saucedemo.com
+[2026-01-08T12:46:41.705Z] [INFO] Available browsers: chrome, chromium, firefox, webkit, safari
+[2026-01-08T12:46:41.709Z] [INFO] Starting Custom Framework Demo Tests
+[2026-01-08T12:46:41.711Z] [INFO] Browser: chrome
+[2026-01-08T12:46:41.713Z] [INFO] Base URL: https://www.saucedemo.com
+[2026-01-08T12:46:41.721Z] [INFO] Info message from Logger
+[2026-01-08T12:46:41.724Z] [DEBUG] Debug message from Logger
+[2026-01-08T12:46:41.726Z] [WARN] Warning message from Logger
+[2026-01-08T12:46:41.728Z] [ERROR] Error message from Logger
+[2026-01-08T12:46:41.730Z] [INFO] Starting Custom Framework Demo Tests
+[2026-01-08T12:46:41.733Z] [INFO] Browser: chrome
+[2026-01-08T12:46:41.735Z] [INFO] Base URL: https://www.saucedemo.com
+[2026-01-08T12:46:41.748Z] [INFO] Starting Custom Framework Demo Tests
+[2026-01-08T12:46:41.751Z] [INFO] Browser: chrome
+[2026-01-08T12:46:41.753Z] [INFO] Base URL: https://www.saucedemo.com
+[2026-01-08T12:46:41.754Z] [DEBUG] Random string: Hk1tvgUm4c
+[2026-01-08T12:46:41.757Z] [DEBUG] Random email: test_OL55pPTT@example.com
+[2026-01-08T12:46:41.758Z] [INFO] Starting Custom Framework Demo Tests
+[2026-01-08T12:46:41.760Z] [DEBUG] Formatted duration: 2m 5.50s
+[2026-01-08T12:46:41.760Z] [INFO] Browser: chrome
+[2026-01-08T12:46:41.762Z] [DEBUG] Timestamp: 2026-01-08T12:46:41.762Z
+[2026-01-08T12:46:41.763Z] [INFO] Base URL: https://www.saucedemo.com
+[2026-01-08T12:46:41.768Z] [INFO] Starting Custom Framework Demo Tests
+[2026-01-08T12:46:41.770Z] [INFO] Browser: chrome
+[2026-01-08T12:46:41.772Z] [INFO] Base URL: https://www.saucedemo.com
+[2026-01-08T12:46:41.975Z] [INFO] Navigating to: https://www.saucedemo.com
+[2026-01-08T12:46:41.978Z] [INFO] Navigating to: https://www.saucedemo.com
+[2026-01-08T12:46:42.049Z] [INFO] ConfigManager test - Browser: chrome, URL: https://www.saucedemo.com
+[2026-01-08T12:46:42.053Z] [INFO] Navigating to: https://www.saucedemo.com
+[2026-01-08T12:46:42.081Z] [INFO] Navigating to: https://www.saucedemo.com
+[2026-01-08T12:46:42.128Z] [INFO] Starting full framework integration test
+[2026-01-08T12:46:42.131Z] [INFO] Navigating to: https://www.saucedemo.com
+[2026-01-08T12:46:42.528Z] [DEBUG] Generated random string: 18MhOGPJ
+[2026-01-08T12:46:42.531Z] [DEBUG] Filling field: #user-name with text: standard_user
+[2026-01-08T12:46:42.546Z] [DEBUG] Filling field: #password with text: secret_sauce
+[2026-01-08T12:46:42.552Z] [DEBUG] Filling field: #user-name with text: standard_user
+[2026-01-08T12:46:42.562Z] [DEBUG] Clicking element: #login-button
+[2026-01-08T12:46:42.597Z] [DEBUG] Filling field: #password with text: secret_sauce
+[2026-01-08T12:46:42.601Z] [DEBUG] Test data: PXpr4
+[2026-01-08T12:46:42.604Z] [DEBUG] Filling field: #user-name with text: standard_user
+[2026-01-08T12:46:42.614Z] [INFO] BasePage template method test - URL: https://www.saucedemo.com/
+[2026-01-08T12:46:42.616Z] [DEBUG] Clicking element: #login-button
+[2026-01-08T12:46:42.647Z] [DEBUG] Filling field: #password with text: secret_sauce
+[2026-01-08T12:46:42.657Z] [INFO] Test completed in: 0.68s
+[2026-01-08T12:46:42.663Z] [DEBUG] Clicking element: #login-button
+[2026-01-08T12:46:42.693Z] [INFO] Report Summary: {"total":1,"passed":1,"failed":0,"skipped":0,"duration":0.637}
+[2026-01-08T12:46:43.311Z] [INFO] Test completed. Summary: {"total":1,"passed":1,"failed":0,"skipped":0,"duration":1.183}

@@ -1,0 +1,31 @@
+{
+  "name": "project-04-multiple-browser-testing",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite for cross-browser testing (Chrome, Firefox, WebKit)",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:login": "playwright test tests/test_cross_browser_login.spec.ts",
+    "test:navigation": "playwright test tests/test_cross_browser_navigation.spec.ts"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "cross-browser",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}
+

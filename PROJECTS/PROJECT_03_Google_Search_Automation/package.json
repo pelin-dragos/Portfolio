@@ -1,0 +1,30 @@
+{
+  "name": "project-03-google-search-automation",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite for Google Search automation (queries, results, autocomplete, cookies)",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:queries": "playwright test tests/test_search_queries.spec.ts",
+    "test:results": "playwright test tests/test_search_results.spec.ts",
+    "test:autocomplete": "playwright test tests/test_autocomplete.spec.ts",
+    "test:cookies": "playwright test tests/test_cookies.spec.ts"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "google-search",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}
+

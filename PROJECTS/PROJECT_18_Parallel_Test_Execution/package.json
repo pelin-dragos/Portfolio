@@ -1,0 +1,33 @@
+{
+  "name": "project-18-parallel-test-execution",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite for parallel test execution",
+  "scripts": {
+    "test": "playwright test",
+    "test:serial": "playwright test --workers=1",
+    "test:parallel": "playwright test --workers=4",
+    "test:auto": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:login": "playwright test --grep @login",
+    "test:navigation": "playwright test --grep @navigation",
+    "test:cart": "playwright test --grep @cart",
+    "report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "parallel-execution",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}
+

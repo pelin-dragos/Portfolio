@@ -1,0 +1,49 @@
+Accessibility Test Report
+==================================================
+
+Summary:
+  Total Tests: 3
+  Passed: 3
+  Failed: 0
+  Violations Found: 0
+
+Results:
+--------------------------------------------------
+
+Test: smoke_keyboard
+Status: PASSED
+Message: Keyboard navigation works. Focused element: input
+Timestamp: 2026-01-08T13:25:30.994Z
+Details: {
+  "focusedElement": {
+    "tagName": "input",
+    "text": "",
+    "hasAriaLabel": false
+  },
+  "totalFocusable": 3
+}
+
+
+Test: smoke_alt_text
+Status: PASSED
+Message: All 0 images have proper alt text
+Timestamp: 2026-01-08T13:25:30.994Z
+Details: {
+  "total": 0,
+  "withAlt": 0,
+  "withoutAlt": 0,
+  "emptyAlt": 0,
+  "images": []
+}
+
+
+Test: smoke_focus
+Status: PASSED
+Message: Focus indicators are present
+Timestamp: 2026-01-08T13:25:30.994Z
+Details: {
+  "hasFocusStyles": true,
+  "hasVisibleFocus": true,
+  "focusableCount": 3
+}
+

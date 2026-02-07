@@ -1,0 +1,39 @@
+[
+  {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "expected_result": "success",
+    "test_description": "Valid login with standard user"
+  },
+  {
+    "username": "locked_out_user",
+    "password": "secret_sauce",
+    "expected_result": "failure",
+    "test_description": "Login attempt with locked user"
+  },
+  {
+    "username": "invalid_user",
+    "password": "invalid_pass",
+    "expected_result": "failure",
+    "test_description": "Login with invalid credentials"
+  },
+  {
+    "username": "standard_user",
+    "password": "wrong_password",
+    "expected_result": "failure",
+    "test_description": "Login with wrong password"
+  },
+  {
+    "username": "problem_user",
+    "password": "secret_sauce",
+    "expected_result": "success",
+    "test_description": "Login with problem user"
+  },
+  {
+    "username": "performance_glitch_user",
+    "password": "secret_sauce",
+    "expected_result": "success",
+    "test_description": "Login with performance glitch user"
+  }
+]
+

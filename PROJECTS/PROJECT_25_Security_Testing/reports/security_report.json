@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "total": 2,
+    "passed": 1,
+    "failed": 1,
+    "vulnerabilities": 1
+  },
+  "results": [
+    {
+      "testName": "smoke_https_check",
+      "result": {
+        "passed": true,
+        "message": "Site is using HTTPS",
+        "details": {
+          "url": "https://www.saucedemo.com/"
+        }
+      },
+      "timestamp": "2026-01-08T13:19:08.946Z"
+    },
+    {
+      "testName": "smoke_headers_check",
+      "result": {
+        "passed": false,
+        "message": "Missing required security headers: X-Content-Type-Options, X-Frame-Options, X-XSS-Protection",
+        "details": {
+          "missingHeaders": [
+            "X-Content-Type-Options",
+            "X-Frame-Options",
+            "X-XSS-Protection"
+          ],
+          "issues": [
+            "Recommended header missing: Strict-Transport-Security",
+            "Recommended header missing: Content-Security-Policy",
+            "Recommended header missing: Referrer-Policy"
+          ]
+        }
+      },
+      "timestamp": "2026-01-08T13:19:08.946Z"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "violations": 0
+  },
+  "results": [
+    {
+      "testName": "smoke_keyboard",
+      "result": {
+        "passed": true,
+        "message": "Keyboard navigation works. Focused element: input",
+        "details": {
+          "focusedElement": {
+            "tagName": "input",
+            "text": "",
+            "hasAriaLabel": false
+          },
+          "totalFocusable": 3
+        }
+      },
+      "timestamp": "2026-01-08T13:25:30.994Z"
+    },
+    {
+      "testName": "smoke_alt_text",
+      "result": {
+        "passed": true,
+        "message": "All 0 images have proper alt text",
+        "details": {
+          "total": 0,
+          "withAlt": 0,
+          "withoutAlt": 0,
+          "emptyAlt": 0,
+          "images": []
+        }
+      },
+      "timestamp": "2026-01-08T13:25:30.994Z"
+    },
+    {
+      "testName": "smoke_focus",
+      "result": {
+        "passed": true,
+        "message": "Focus indicators are present",
+        "details": {
+          "hasFocusStyles": true,
+          "hasVisibleFocus": true,
+          "focusableCount": 3
+        }
+      },
+      "timestamp": "2026-01-08T13:25:30.994Z"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+Security Test Report
+==================================================
+
+Summary:
+  Total Tests: 2
+  Passed: 1
+  Failed: 1
+  Vulnerabilities Found: 1
+
+Results:
+--------------------------------------------------
+
+Test: smoke_https_check
+Status: PASSED
+Message: Site is using HTTPS
+Timestamp: 2026-01-08T13:19:08.946Z
+Details: {
+  "url": "https://www.saucedemo.com/"
+}
+
+
+Test: smoke_headers_check
+Status: FAILED
+Message: Missing required security headers: X-Content-Type-Options, X-Frame-Options, X-XSS-Protection
+Timestamp: 2026-01-08T13:19:08.946Z
+Details: {
+  "missingHeaders": [
+    "X-Content-Type-Options",
+    "X-Frame-Options",
+    "X-XSS-Protection"
+  ],
+  "issues": [
+    "Recommended header missing: Strict-Transport-Security",
+    "Recommended header missing: Content-Security-Policy",
+    "Recommended header missing: Referrer-Policy"
+  ]
+}
+
+
+⚠️  VULNERABILITIES FOUND:
+--------------------------------------------------
+- smoke_headers_check: Missing required security headers: X-Content-Type-Options, X-Frame-Options, X-XSS-Protection

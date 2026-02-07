@@ -1,0 +1,39 @@
+{
+  "name": "project-17-bdd-framework",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript BDD Framework with Cucumber",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:headed": "cucumber-js --world-parameters '{\"headed\":true}'",
+    "test:ui": "playwright test --ui",
+    "test:debug": "cucumber-js --world-parameters '{\"debug\":true}'",
+    "test:smoke": "cucumber-js --tags @smoke",
+    "test:login": "cucumber-js features/login.feature",
+    "test:navigation": "cucumber-js features/navigation.feature",
+    "test:cart": "cucumber-js features/shopping_cart.feature",
+    "test:checkout": "cucumber-js features/checkout.feature",
+    "test:sorting": "cucumber-js features/product_sorting.feature",
+    "test:logout": "cucumber-js features/logout.feature",
+    "report": "node scripts/generate-report.js"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "bdd",
+    "cucumber",
+    "gherkin",
+    "test-automation",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.0.0",
+    "@cucumber/pretty-formatter": "^1.0.1",
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
+

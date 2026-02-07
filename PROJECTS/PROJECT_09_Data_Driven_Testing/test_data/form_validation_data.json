@@ -1,0 +1,45 @@
+[
+  {
+    "field_name": "email",
+    "value": "test@example.com",
+    "expected_result": "valid",
+    "description": "Valid email format"
+  },
+  {
+    "field_name": "email",
+    "value": "invalid-email",
+    "expected_result": "invalid",
+    "description": "Invalid email format"
+  },
+  {
+    "field_name": "email",
+    "value": "missing@domain",
+    "expected_result": "invalid",
+    "description": "Email missing domain extension"
+  },
+  {
+    "field_name": "phone",
+    "value": "1234567890",
+    "expected_result": "valid",
+    "description": "Valid phone number"
+  },
+  {
+    "field_name": "phone",
+    "value": "123",
+    "expected_result": "invalid",
+    "description": "Phone number too short"
+  },
+  {
+    "field_name": "required_field",
+    "value": "",
+    "expected_result": "invalid",
+    "description": "Required field empty"
+  },
+  {
+    "field_name": "required_field",
+    "value": "test value",
+    "expected_result": "valid",
+    "description": "Required field filled"
+  }
+]
+

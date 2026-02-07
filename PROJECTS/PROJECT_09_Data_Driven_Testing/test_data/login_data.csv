@@ -1,0 +1,8 @@
+username,password,expected_result,test_description
+standard_user,secret_sauce,success,Valid login with standard user
+locked_out_user,secret_sauce,failure,Login attempt with locked user
+invalid_user,invalid_pass,failure,Login with invalid credentials
+standard_user,wrong_password,failure,Login with wrong password
+problem_user,secret_sauce,success,Login with problem user
+performance_glitch_user,secret_sauce,success,Login with performance glitch user
+

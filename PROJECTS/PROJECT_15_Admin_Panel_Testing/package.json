@@ -1,0 +1,36 @@
+{
+  "name": "project-15-admin-panel-testing",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite for admin panel CRUD operations",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:login": "playwright test --grep @login",
+    "test:create": "playwright test --grep @create",
+    "test:read": "playwright test --grep @read",
+    "test:update": "playwright test --grep @update",
+    "test:delete": "playwright test --grep @delete",
+    "test:crud": "playwright test --grep @crud",
+    "test:search": "playwright test --grep @search",
+    "test:pagination": "playwright test --grep @pagination",
+    "test:bulk": "playwright test --grep @bulk"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "admin-panel",
+    "crud",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}
+

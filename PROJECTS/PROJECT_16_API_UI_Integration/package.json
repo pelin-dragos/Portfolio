@@ -1,0 +1,36 @@
+{
+  "name": "project-16-api-ui-integration",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite for API + UI integration testing",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:integration": "playwright test --grep @integration",
+    "test:api": "playwright test --grep @api",
+    "test:ui": "playwright test --grep @ui",
+    "test:sync": "playwright test --grep @sync",
+    "test:setup": "playwright test --grep @setup",
+    "test:verification": "playwright test --grep @verification",
+    "test:cleanup": "playwright test --grep @cleanup",
+    "test:flow": "playwright test --grep @flow"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "api-testing",
+    "ui-testing",
+    "integration-testing",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}
+

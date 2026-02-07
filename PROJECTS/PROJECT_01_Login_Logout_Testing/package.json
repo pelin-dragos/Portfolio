@@ -1,0 +1,28 @@
+{
+  "name": "project-01-login-logout-testing",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite for login/logout functionality",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:login-success": "playwright test tests/test_login_success.spec.ts",
+    "test:login-failure": "playwright test tests/test_login_failure.spec.ts",
+    "test:logout": "playwright test tests/test_logout.spec.ts"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}
+

@@ -1,0 +1,32 @@
+{
+  "name": "project-22-cicd-integration",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite with CI/CD integration",
+  "scripts": {
+    "test": "playwright test",
+    "test:ci": "playwright test --reporter=html,junit,list",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "install:browsers": "playwright install --with-deps",
+    "report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "cicd",
+    "ci-cd",
+    "github-actions",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}

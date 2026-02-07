@@ -1,0 +1,27 @@
+{
+  "name": "project-05-screenshot-on-failure",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite demonstrating automatic screenshot on failure",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:failures": "playwright test --grep @failure_test"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "screenshot",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}
+

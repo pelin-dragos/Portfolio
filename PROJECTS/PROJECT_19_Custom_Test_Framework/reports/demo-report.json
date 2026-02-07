@@ -1,0 +1,17 @@
+{
+  "summary": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "duration": 0.637
+  },
+  "results": [
+    {
+      "name": "report_manager_demo",
+      "status": "passed",
+      "duration": 0.637,
+      "timestamp": "2026-01-08T12:46:42.690Z"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "project-14-banking-application-testing",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite for banking application testing with secure credentials management",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:login": "playwright test --grep @login",
+    "test:dashboard": "playwright test --grep @dashboard",
+    "test:balance": "playwright test --grep @balance",
+    "test:transfer": "playwright test --grep @transfer",
+    "test:statements": "playwright test --grep @statements"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "banking",
+    "security",
+    "credentials",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "dotenv": "^16.3.1"
+  }
+}
+

@@ -1,0 +1,62 @@
+{
+  "summary": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0
+  },
+  "results": [
+    {
+      "testName": "smoke_performance_test",
+      "metrics": {
+        "pageLoad": {
+          "domContentLoaded": null,
+          "loadComplete": null,
+          "domInteractive": null,
+          "domComplete": null
+        },
+        "network": {
+          "dns": 0.0062999999523162846,
+          "tcp": 0.08270000004768371,
+          "request": 0.03640000009536743,
+          "response": 0.0005999999046325683,
+          "domProcessing": 0.35879999995231626,
+          "totalTime": null
+        },
+        "resources": [
+          {
+            "name": "https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500",
+            "duration": 0.12239999985694885,
+            "size": 794,
+            "type": "link"
+          },
+          {
+            "name": "https://www.saucedemo.com/static/js/main.bcf4bc5f.js",
+            "duration": 0.13860000014305116,
+            "size": 221912,
+            "type": "script"
+          },
+          {
+            "name": "https://www.saucedemo.com/static/css/main.8a7d64a1.css",
+            "duration": 0.040799999952316285,
+            "size": 11204,
+            "type": "link"
+          },
+          {
+            "name": "https://events.backtrace.io/api/unique-events/submit?universe=UNIVERSE&token=TOKEN",
+            "duration": 0.7649000000953674,
+            "size": 0,
+            "type": "fetch"
+          },
+          {
+            "name": "https://events.backtrace.io/api/summed-events/submit?universe=UNIVERSE&token=TOKEN",
+            "duration": 0.7644000000953675,
+            "size": 0,
+            "type": "fetch"
+          }
+        ]
+      },
+      "timestamp": "2026-01-08T13:14:03.813Z",
+      "passed": true
+    }
+  ]
+}
