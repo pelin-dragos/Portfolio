@@ -12,6 +12,9 @@ public final class ApiConfig {
     private static final String BASE_URL_KEY = "BASE_URL";
     private static final String AUTH_TOKEN_KEY = "AUTH_TOKEN";
     private static final String PROTECTED_ENDPOINT_KEY = "PROTECTED_ENDPOINT";
+    private static final String USER_TOKEN_KEY = "USER_TOKEN";
+    private static final String ADMIN_ENDPOINT_KEY = "ADMIN_ENDPOINT";
+    private static final String EXPIRED_TOKEN_KEY = "EXPIRED_TOKEN";
 
     private ApiConfig() {
     }
@@ -44,5 +47,26 @@ public final class ApiConfig {
      */
     public static Optional<String> getProtectedEndpoint() {
         return Optional.ofNullable(get(PROTECTED_ENDPOINT_KEY)).filter(s -> !s.isEmpty());
+    }
+
+    /**
+     * Optional token with lower privileges (e.g. user role) for 403 role tests.
+     */
+    public static Optional<String> getUserToken() {
+        return Optional.ofNullable(get(USER_TOKEN_KEY)).filter(s -> !s.isEmpty());
+    }
+
+    /**
+     * Optional endpoint that requires higher privileges (e.g. admin). Used with USER_TOKEN for 403 tests.
+     */
+    public static Optional<String> getAdminEndpoint() {
+        return Optional.ofNullable(get(ADMIN_ENDPOINT_KEY)).filter(s -> !s.isEmpty());
+    }
+
+    /**
+     * Optional expired token for testing 401 expiry behaviour. When not set, expired-token test is skipped.
+     */
+    public static Optional<String> getExpiredToken() {
+        return Optional.ofNullable(get(EXPIRED_TOKEN_KEY)).filter(s -> !s.isEmpty());
     }
 }

@@ -35,3 +35,13 @@ Verify that when an endpoint requires a specific role or permission, a request w
 ## Automation Notes
 
 - Assert on status 403. Use token from config (e.g. user token). Skip or tag when endpoint does not enforce role-based access. Part of optional auth set.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-AUTH-003 |
+| **Automated test (source)** | `EndpointRequiringRoleReturns403WithInsufficientPermissionsTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/auth/endpoint_requiring_role_returns_403_with_insufficient_permissions/` |

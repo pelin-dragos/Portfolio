@@ -36,3 +36,13 @@ Verify that when a request is sent with an expired authentication token, the API
 ## Automation Notes
 
 - Assert on status 401. Optionally assert on body containing "expired" or similar. Skip or tag when expired token cannot be produced in test env. Part of optional auth set.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-AUTH-004 |
+| **Automated test (source)** | `ExpiredTokenReturns401WithAppropriateMessageTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/auth/expired_token_returns_401_with_appropriate_message/` |

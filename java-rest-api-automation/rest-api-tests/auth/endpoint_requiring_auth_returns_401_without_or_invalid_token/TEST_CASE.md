@@ -34,3 +34,13 @@ Verify that an endpoint that requires authentication returns HTTP 401 Unauthoriz
 ## Automation Notes
 
 - Assert on status 401. Use one or two variants (no header, invalid token). Skip or tag when endpoint is not protected. Part of optional auth test set.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-AUTH-001 |
+| **Automated test (source)** | `EndpointRequiringAuthReturns401WithoutOrInvalidTokenTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/auth/endpoint_requiring_auth_returns_401_without_or_invalid_token/` |
