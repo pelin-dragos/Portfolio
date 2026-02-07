@@ -1,0 +1,19 @@
+# Environment (never commit secrets)
+.env
+.env.local
+*.env
+
+# Maven
+target/
+pom.xml.tag
+
+# IDE
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db

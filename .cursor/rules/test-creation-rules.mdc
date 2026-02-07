@@ -1,0 +1,154 @@
+---
+alwaysApply: true
+---
+
+# QA Automation — Testing Laws
+
+**Scope:** All test code in this repository (java-rest-api-automation, Playwright, postman-api-collection, and any future projects).  
+**Purpose:** Rules that must be followed when writing, reviewing, or modifying automated tests. These ensure consistency, maintainability, security, and reliability across the entire portfolio.
+
+---
+
+## 1. Independence & Isolation
+
+- **One test must not depend on another.** Tests can run in any order; no shared mutable state between tests.
+- **Each test must be able to run alone** (e.g. `mvn test -Dtest=SingleTest` or equivalent) and still pass.
+- **Setup and teardown:** Use `@BeforeEach` / `@AfterEach` (or equivalent) for test-local setup; avoid relying on leftovers from previous tests.
+- **Database and APIs:** Prefer creating test data inside the test (or in a dedicated setup step) and cleaning up in teardown. Do not assume data created by another test exists.
+
+---
+
+## 2. No Secrets in Code
+
+- **Never hardcode** passwords, API keys, tokens, or any sensitive data in test code or config committed to the repo.
+- **Use environment variables or config files** (e.g. `.env` loaded at runtime). Provide `.env.example` with placeholder names only; real values stay out of version control.
+- **Credentials and URLs** for test environments must come from env/config, not from literal strings in source.
+- **Logs and reports** must not print or persist passwords, tokens, or full request/response bodies that contain secrets. Mask or redact sensitive fields.
+
+---
+
+## 3. Naming & Readability
+
+- **Test method names** describe behaviour and expected outcome (e.g. `shouldReturn201WhenCreatingValidUser`, `login_withInvalidPassword_shouldShowError`). Avoid generic names like `test1` or `testLogin`.
+- **Variables and constants** use clear, descriptive names (e.g. `expectedStatusCode`, `invalidEmailFormat`). Avoid single-letter or cryptic names except for loop indices where conventional.
+- **Assertion messages:** Prefer meaningful failure messages (e.g. "Expected user balance to be 100 after transfer") so failures are understandable without opening the code.
+- **Classes and files:** Name after the feature or flow under test (e.g. `LoginApiTest`, `TransferFundsTest`, `LoginPage`).
+
+---
+
+## 4. Assertions & Expectations
+
+- **Every test must assert something.** A test that only performs actions without assertions is not a valid test.
+- **One logical assertion per test when possible.** Multiple assertions are acceptable when they verify the same behaviour (e.g. status code + body fields), but avoid testing unrelated things in one test.
+- **Assert on the minimal set of outcomes** that define success; avoid over-specifying (e.g. don’t assert on timestamps or IDs unless that’s what you’re testing).
+- **Use the framework’s assertion API** (e.g. JUnit `assertThat`, RestAssured `then()`, Postman `pm.test`) instead of manual `if` + fail.
+
+---
+
+## 5. Test Data
+
+- **Test data must be explicit and traceable.** Prefer in-test data or files under `src/test/resources` (or project-equivalent) over production or shared DB snapshots.
+- **No production data** in tests. Use dedicated test accounts, test APIs, or anonymized/synthetic data only.
+- **Data for negative tests** (invalid emails, wrong lengths, etc.) must be clearly named (e.g. `INVALID_EMAIL_FORMAT`) and used only for the intended negative scenario.
+- **Shared test data** (e.g. JSON/CSV) should be versioned and documented (what it represents, which tests use it).
+
+---
+
+## 6. Structure & Single Responsibility
+
+- **One test file/class per feature or flow** (e.g. one class for login API tests, one for login UI tests). Do not mix unrelated flows in one file.
+- **Page Object / API client / test layers:** Keep test classes focused on “what to test”; put “how to do it” in pages, clients, or utilities. Tests should not contain long sequences of low-level driver or HTTP calls.
+- **Reusable steps** (e.g. “login as user X”) live in shared code (base classes, steps, fixtures), not duplicated across many tests.
+- **Avoid tests longer than ~30–50 lines** of logic; extract setup or steps into methods or builders.
+
+---
+
+## 7. Stability & Timing
+
+- **Prefer explicit waits** (wait for element, wait for status) over fixed `sleep`/`Thread.sleep`. Use framework support (e.g. WebDriverWait, RestAssured timeouts, Postman delays only when necessary).
+- **Timeouts must be configurable** (e.g. from config or constants), not magic numbers scattered in the code.
+- **Tests must be idempotent and repeatable.** Flaky tests (random failures) must be fixed or removed; do not “rerun until green.”
+- **Avoid depending on system time** (e.g. “today’s date”) unless the test is explicitly about date logic; use fixed or injected dates when possible.
+
+---
+
+## 8. Errors & Logging
+
+- **Failures must be diagnosable.** On assertion failure, logs or reports should give enough context (test name, step, relevant request/response or page state) to debug without re-running in debug mode.
+- **Do not swallow exceptions.** Use `throws` or proper exception handling; never empty `catch` blocks. If a test expects an exception, assert on it explicitly.
+- **Do not log secrets** (passwords, tokens, full cards). Log redacted or high-level info only (e.g. "Login attempted for user X").
+- **Log at a consistent level** (e.g. info for flow steps, debug for details). Avoid noisy logs in assertions.
+
+---
+
+## 9. API Tests (RestAssured, Postman, etc.)
+
+- **Base URL and environment** come from config/env; no hardcoded hostnames or ports in test code.
+- **Status codes must be asserted** for every request when the test cares about success/failure (e.g. 200, 201, 400, 401, 404).
+- **Response body assertions** should be explicit (e.g. required fields, types). Prefer schema or key-field checks over “anything is fine.”
+- **Headers** (Content-Type, auth) must be set consistently via a client or base spec; avoid repeating header logic in every test.
+- **Unstable or external APIs:** Prefer contract/smoke tests and documented assumptions; avoid tests that depend on third-party availability or changing data.
+
+---
+
+## 10. UI Tests (Selenium, Playwright, etc.)
+
+- **Locators must be maintainable.** Prefer stable selectors (id, data attributes, semantic roles) over fragile CSS (long paths, nth-child). Avoid duplicate locator strings; use page objects or shared locator constants.
+- **No hardcoded waits** (e.g. 5 second sleep) unless explicitly required and documented. Use “wait for visible/clickable” or equivalent.
+- **Tests must clean up** (e.g. log out, close dialogs, clear state) so the next test or suite run starts from a known state.
+- **Browser and viewport** (including mobile/tablet) must be configurable; do not assume a single screen size or browser.
+
+---
+
+## 11. Integration & DB Tests
+
+- **Database state:** Tests that change data must leave the DB in a clean state (teardown, transactions, or test DB reset). Do not pollute shared environments.
+- **SQL and queries:** Use parameterized queries or safe APIs; never concatenate user input into SQL (even in tests) to avoid bad habits and injection risks.
+- **Connections:** Use connection pooling or open/close in try-with-resources; do not leave connections open.
+- **Test DB vs production:** Integration tests run against a test database only; connection strings from config/env.
+
+---
+
+## 12. Version Control & Reproducibility
+
+- **Test code is versioned.** No “local only” tests that are never committed; if it’s part of the suite, it’s in the repo.
+- **Dependencies and versions** (Maven, npm, etc.) are pinned or locked so that `clone + install + run` reproduces the same results.
+- **README or docs** for each project describe how to run tests (commands, env vars, optional profiles). New tests must not require undocumented steps to run.
+
+---
+
+## 13. Security & Compliance (Test Design)
+
+- **Tests must not perform unsafe actions** (e.g. real payments, real emails to real users, destructive ops on production). Use mocks, test endpoints, or test mode only.
+- **Personal and sensitive data:** Do not use real PII in test data; use synthetic or anonymized data. Comply with internal policies and GDPR where applicable.
+- **Test accounts and roles** must have minimal required permissions; no tests running as full-admin unless the test is explicitly about admin behaviour.
+
+---
+
+## 14. Maintainability & Future Work
+
+- **Duplicate logic** (e.g. same login steps in 20 tests) must be extracted into shared code. DRY applies to tests as well.
+- **Deprecated or unused tests** must be removed or updated. Do not leave commented-out tests “for later.”
+- **When the application changes,** update or remove affected tests in the same change (or in a dedicated follow-up). Do not leave known-broken tests in the suite.
+- **New tests** must follow the same structure and conventions as the rest of the project (same base classes, naming, resource layout).
+
+---
+
+## 15. Summary Checklist (Pre-Commit / Pre-Merge)
+
+- [ ] Tests are independent and can run in any order.
+- [ ] No secrets or credentials in code; env/config used.
+- [ ] Test and assertion names are clear and descriptive.
+- [ ] Every test has at least one assertion.
+- [ ] Test data is explicit and non-production.
+- [ ] Structure follows project conventions (e.g. page objects, API client).
+- [ ] No hardcoded sleeps; explicit waits and configurable timeouts.
+- [ ] No sensitive data in logs or reports.
+- [ ] API tests assert status and relevant response content.
+- [ ] UI tests use stable locators and cleanup where needed.
+- [ ] Integration/DB tests clean up and use test DB only.
+- [ ] Dependencies and run instructions are documented.
+
+---
+
+*These rules apply to all current and future test projects in this repository. Exceptions must be documented and justified.*
