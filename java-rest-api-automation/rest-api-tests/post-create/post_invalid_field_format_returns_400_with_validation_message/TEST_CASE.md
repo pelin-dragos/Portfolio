@@ -35,3 +35,13 @@ Verify that a POST request with an invalid format for a field (e.g. invalid emai
 ## Automation Notes
 
 - Assert on status and on error body. Use constants for invalid values (e.g. INVALID_EMAIL_FORMAT). One invalid field per test to keep failures clear.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-POST-004 |
+| **Automated test (source)** | `PostInvalidFieldFormatReturns400WithValidationMessageTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/post-create/post_invalid_field_format_returns_400_with_validation_message/` |

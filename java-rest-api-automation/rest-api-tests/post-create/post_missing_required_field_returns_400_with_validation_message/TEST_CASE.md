@@ -36,3 +36,13 @@ Verify that a POST request with one or more required fields missing returns HTTP
 ## Automation Notes
 
 - Assert on status 400 (or 422) and on presence of error message/code in body. Use a single missing field to keep the test focused; use constants for field names.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-POST-003 |
+| **Automated test (source)** | `PostMissingRequiredFieldReturns400WithValidationMessageTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/post-create/post_missing_required_field_returns_400_with_validation_message/` |

@@ -35,3 +35,13 @@ Verify that when the API enforces a uniqueness constraint (e.g. unique email, un
 ## Automation Notes
 
 - Assert on status 409 or 400 and on error message. Use test data for unique value; clean up created resource in teardown if needed to keep suite idempotent.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-POST-009 |
+| **Automated test (source)** | `PostDuplicateReturns409Or400WhenApplicableTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/post-create/post_duplicate_returns_409_or_400_when_applicable/` |

@@ -33,3 +33,13 @@ Verify that a POST request with an empty body (or no body) to an endpoint that r
 ## Automation Notes
 
 - Assert on status 400 or 415. Document which variant the API returns. Use empty body from constant or literal; do not send production data.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-POST-005 |
+| **Automated test (source)** | `PostEmptyBodyReturns400Or415WhenRequiredTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/post-create/post_empty_body_returns_400_or_415_when_required/` |

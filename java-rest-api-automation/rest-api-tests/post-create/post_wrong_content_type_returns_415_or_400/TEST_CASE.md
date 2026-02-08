@@ -34,3 +34,13 @@ Verify that a POST request with an unsupported or wrong Content-Type header (e.g
 ## Automation Notes
 
 - Assert on status 415 or 400. Use a constant for the wrong Content-Type. Body can be valid JSON; the test targets header handling.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-POST-006 |
+| **Automated test (source)** | `PostWrongContentTypeReturns415Or400Test.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/post-create/post_wrong_content_type_returns_415_or_400/` |

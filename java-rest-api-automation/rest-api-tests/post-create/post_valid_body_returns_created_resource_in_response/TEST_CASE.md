@@ -34,3 +34,13 @@ Verify that the POST create response body contains the created resource (e.g. as
 ## Automation Notes
 
 - Assert on status and on body: presence of `id`, and equality or presence of key fields. Use RestAssured body path or DTO.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-POST-002 |
+| **Automated test (source)** | `PostValidBodyReturnsCreatedResourceInResponseTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/post-create/post_valid_body_returns_created_resource_in_response/` |

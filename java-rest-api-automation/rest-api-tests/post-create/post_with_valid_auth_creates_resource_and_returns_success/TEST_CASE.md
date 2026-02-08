@@ -37,3 +37,13 @@ Verify that a POST request with valid authentication creates the resource and re
 ## Automation Notes
 
 - Assert on status and on created resource (id/body). Use auth from config; no hardcoded secrets. Optional GET verification keeps test self-contained and idempotent.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-POST-008 |
+| **Automated test (source)** | `PostWithValidAuthCreatesResourceAndReturnsSuccessTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/post-create/post_with_valid_auth_creates_resource_and_returns_success/` |

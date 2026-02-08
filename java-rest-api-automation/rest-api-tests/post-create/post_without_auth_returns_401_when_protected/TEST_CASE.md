@@ -35,3 +35,13 @@ Verify that a POST request to the create endpoint without valid authentication r
 ## Automation Notes
 
 - Assert on status 401. Do not send valid credentials. Skip or tag when endpoint is not protected.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-POST-007 |
+| **Automated test (source)** | `PostWithoutAuthReturns401WhenProtectedTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/post-create/post_without_auth_returns_401_when_protected/` |

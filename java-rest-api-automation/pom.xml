@@ -108,6 +108,31 @@
                 </plugins>
             </build>
         </profile>
+        <!-- Run only post-create tests: mvn test -Ppost-create-tests -->
+        <profile>
+            <id>post-create-tests</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <includes>
+                                <include>**/PostValidBodyReturns201AndLocationHeaderTest.java</include>
+                                <include>**/PostValidBodyReturnsCreatedResourceInResponseTest.java</include>
+                                <include>**/PostWithValidAuthCreatesResourceAndReturnsSuccessTest.java</include>
+                                <include>**/PostWithoutAuthReturns401WhenProtectedTest.java</include>
+                                <include>**/PostMissingRequiredFieldReturns400WithValidationMessageTest.java</include>
+                                <include>**/PostInvalidFieldFormatReturns400WithValidationMessageTest.java</include>
+                                <include>**/PostEmptyBodyReturns400Or415WhenRequiredTest.java</include>
+                                <include>**/PostDuplicateReturns409Or400WhenApplicableTest.java</include>
+                                <include>**/PostWrongContentTypeReturns415Or400Test.java</include>
+                            </includes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
         <!-- Run only patch-update tests: mvn test -Ppatch-update-tests -->
         <profile>
             <id>patch-update-tests</id>

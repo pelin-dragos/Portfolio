@@ -37,3 +37,13 @@ Verify that a POST request with a valid request body to the create endpoint retu
 ## Automation Notes
 
 - Assert on status 201 (or 200 per contract) and on presence and format of `Location` header. Use request body from test data or builder; no hardcoded production data.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-POST-001 |
+| **Automated test (source)** | `PostValidBodyReturns201AndLocationHeaderTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/post-create/post_valid_body_returns_201_and_location_header/` |
