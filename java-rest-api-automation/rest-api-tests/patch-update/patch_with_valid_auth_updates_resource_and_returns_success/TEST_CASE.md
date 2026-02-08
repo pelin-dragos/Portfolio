@@ -36,3 +36,13 @@ Verify that a PATCH request with valid authentication updates the resource and r
 ## Automation Notes
 
 - Assert on status 200 and on updated field values. Use auth from config; no hardcoded secrets.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-PATCH-007 |
+| **Automated test (source)** | `PatchWithValidAuthUpdatesResourceAndReturnsSuccessTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/patch-update/patch_with_valid_auth_updates_resource_and_returns_success/` |

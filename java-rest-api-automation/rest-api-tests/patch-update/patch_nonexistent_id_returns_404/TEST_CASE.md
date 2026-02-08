@@ -35,3 +35,13 @@ Verify that a PATCH request with a non-existent resource ID returns HTTP 404 Not
 ## Automation Notes
 
 - Assert on status 404. Use a stable non-existent ID constant.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-PATCH-003 |
+| **Automated test (source)** | `PatchNonexistentIdReturns404Test.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/patch-update/patch_nonexistent_id_returns_404/` |

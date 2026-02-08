@@ -36,3 +36,13 @@ Verify that a PATCH request with a valid partial body and an existing resource I
 ## Automation Notes
 
 - Assert on status 200 and on updated field values. Use partial body from test data; avoid full resource if PATCH is partial-only.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-PATCH-001 |
+| **Automated test (source)** | `PatchValidPartialBodyExistingIdReturns200AndUpdatedResourceTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/patch-update/patch_valid_partial_body_existing_id_returns_200_and_updated_resource/` |

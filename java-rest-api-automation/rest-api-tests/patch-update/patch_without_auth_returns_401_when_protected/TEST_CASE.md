@@ -33,3 +33,13 @@ Verify that a PATCH request without valid authentication returns HTTP 401 Unauth
 ## Automation Notes
 
 - Assert on status 401. Skip or tag when endpoint is not protected.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-PATCH-006 |
+| **Automated test (source)** | `PatchWithoutAuthReturns401WhenProtectedTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/patch-update/patch_without_auth_returns_401_when_protected/` |

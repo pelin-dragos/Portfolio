@@ -35,3 +35,13 @@ Verify that a PATCH request with an empty body `{}` is handled according to the 
 ## Automation Notes
 
 - Assert on status 400 or 200. Document expected behaviour. If API returns 200, assert resource unchanged.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-PATCH-005 |
+| **Automated test (source)** | `PatchEmptyBodyReturns400Or200PerContractTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/patch-update/patch_empty_body_returns_400_or_200_per_contract/` |

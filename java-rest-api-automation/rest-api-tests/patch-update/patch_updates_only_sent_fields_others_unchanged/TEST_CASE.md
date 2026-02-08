@@ -35,3 +35,13 @@ Verify that after a PATCH request, only the fields included in the request body 
 ## Automation Notes
 
 - Assert on both updated and non-updated fields. Use test data for before/after values. Document API behaviour if PATCH sends null to clear fields.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-PATCH-002 |
+| **Automated test (source)** | `PatchUpdatesOnlySentFieldsOthersUnchangedTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/patch-update/patch_updates_only_sent_fields_others_unchanged/` |

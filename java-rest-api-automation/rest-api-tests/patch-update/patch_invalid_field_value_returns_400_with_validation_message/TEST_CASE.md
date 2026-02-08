@@ -34,3 +34,13 @@ Verify that a PATCH request with an invalid value for one of the sent fields (e.
 ## Automation Notes
 
 - Assert on status and error body. Use constants for invalid values. One invalid field per test.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-PATCH-004 |
+| **Automated test (source)** | `PatchInvalidFieldValueReturns400WithValidationMessageTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/patch-update/patch_invalid_field_value_returns_400_with_validation_message/` |
