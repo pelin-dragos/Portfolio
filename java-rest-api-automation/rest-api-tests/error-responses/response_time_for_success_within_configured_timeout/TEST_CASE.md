@@ -36,3 +36,13 @@ Verify that a successful request (e.g. GET list or GET by ID) completes within a
 ## Automation Notes
 
 - Use RestAssured `time()` or similar to get response time. Read threshold from config. Consider tagging as performance and running separately if flaky. Optional test; can be disabled in unstable environments.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-ERROR-003 |
+| **Automated test (source)** | `ResponseTimeForSuccessWithinConfiguredTimeoutTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/error-responses/response_time_for_success_within_configured_timeout/` |

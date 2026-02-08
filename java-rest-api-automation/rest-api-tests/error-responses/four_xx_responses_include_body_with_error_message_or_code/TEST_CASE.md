@@ -35,3 +35,13 @@ Verify that when the API returns a 4xx client error (e.g. 400, 401, 404, 422), t
 ## Automation Notes
 
 - Assert on status 4xx and on body presence and content (e.g. `error`, `message`, or `code`). Use one representative 4xx scenario (e.g. 404 or 400). Adapt to API contract.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-ERROR-001 |
+| **Automated test (source)** | `FourXxResponsesIncludeBodyWithErrorMessageOrCodeTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/error-responses/four_xx_responses_include_body_with_error_message_or_code/` |

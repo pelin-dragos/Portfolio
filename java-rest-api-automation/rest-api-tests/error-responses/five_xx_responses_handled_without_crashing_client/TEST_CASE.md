@@ -33,3 +33,13 @@ Verify that when the API returns a 5xx server error (e.g. 500, 502, 503), the te
 ## Automation Notes
 
 - Assert on status >= 500 and status < 600. Ensure RestAssured (or client) does not throw on 5xx; use validatable response and optional try/catch for body parsing. Mark as N/A if 5xx cannot be triggered in test environment.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-ERROR-002 |
+| **Automated test (source)** | `FiveXxResponsesHandledWithoutCrashingClientTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/error-responses/five_xx_responses_handled_without_crashing_client/` |

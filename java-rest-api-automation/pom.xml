@@ -108,5 +108,24 @@
                 </plugins>
             </build>
         </profile>
+        <!-- Run only error-responses tests: mvn test -Perror-responses-tests -->
+        <profile>
+            <id>error-responses-tests</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <includes>
+                                <include>**/FiveXxResponsesHandledWithoutCrashingClientTest.java</include>
+                                <include>**/FourXxResponsesIncludeBodyWithErrorMessageOrCodeTest.java</include>
+                                <include>**/ResponseTimeForSuccessWithinConfiguredTimeoutTest.java</include>
+                            </includes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 </project>

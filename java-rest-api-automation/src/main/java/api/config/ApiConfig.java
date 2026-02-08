@@ -17,6 +17,8 @@ public final class ApiConfig {
     private static final String EXPIRED_TOKEN_KEY = "EXPIRED_TOKEN";
     private static final String CREATE_ENDPOINT_KEY = "CREATE_ENDPOINT";
     private static final String CONFLICT_RESOURCE_ID_KEY = "CONFLICT_RESOURCE_ID";
+    private static final String RESPONSE_TIMEOUT_MS_KEY = "RESPONSE_TIMEOUT_MS";
+    private static final String ERROR_5XX_ENDPOINT_KEY = "ERROR_5XX_ENDPOINT";
 
     private ApiConfig() {
     }
@@ -86,5 +88,25 @@ public final class ApiConfig {
      */
     public static Optional<String> getConflictResourceId() {
         return Optional.ofNullable(get(CONFLICT_RESOURCE_ID_KEY)).filter(s -> !s.isEmpty());
+    }
+
+    /**
+     * Maximum allowed response time in milliseconds for success endpoint (performance test). When not set, test uses default or skips.
+     */
+    public static Optional<Long> getResponseTimeoutMs() {
+        String v = get(RESPONSE_TIMEOUT_MS_KEY);
+        if (v == null || v.isBlank()) return Optional.empty();
+        try {
+            return Optional.of(Long.parseLong(v.trim()));
+        } catch (NumberFormatException e) {
+            return Optional.empty();
+        }
+    }
+
+    /**
+     * Optional endpoint that returns 5xx (e.g. for fault injection). When not set, 5xx test is skipped.
+     */
+    public static Optional<String> getError5xxEndpoint() {
+        return Optional.ofNullable(get(ERROR_5XX_ENDPOINT_KEY)).filter(s -> !s.isEmpty());
     }
 }
