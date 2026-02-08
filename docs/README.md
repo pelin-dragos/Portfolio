@@ -1,38 +1,38 @@
-# Site portofoliu — QA Automation
+# Portfolio site — QA Automation
 
-Acest folder conține site-ul de portofoliu pentru proiectul QA-Automation. Este gândit să fie servit prin **GitHub Pages** din acest repository.
+This folder contains the portfolio site for the QA-Automation project. It is meant to be served via **GitHub Pages** from this repository.
 
-## Conținut
+## Contents
 
-- **index.html** — pagină principală: proiecte (Java REST API, Postman, Playwright) și tipuri de teste
-- **styles.css** — stiluri (tema închisă, responsive)
-- Poți adăuga alte pagini (ex: `proiecte.html`, `contact.html`) și le verzi aici
+- **index.html** — main page: projects (Java REST API, Postman, Playwright) and test types
+- **styles.css** — styles (dark theme, responsive)
+- You can add more pages (e.g. `projects.html`, `contact.html`) and link them from here
 
-## Deploy pe GitHub Pages
+## Deploy on GitHub Pages
 
-1. În repository-ul **QA-Automation** pe GitHub: **Settings** → **Pages**.
-2. La **Build and deployment**:
-   - **Source**: „Deploy from a branch”.
-   - **Branch**: `main` (sau branch-ul tău default).
+1. In the **QA-Automation** repository on GitHub: **Settings** → **Pages**.
+2. Under **Build and deployment**:
+   - **Source**: “Deploy from a branch”.
+   - **Branch**: `main` (or your default branch).
    - **Folder**: `/docs`.
-3. Salvezi. După 1–2 minute site-ul va fi disponibil la:
+3. Save. After 1–2 minutes the site will be available at:
    - `https://<USERNAME>.github.io/QA-Automation/`
 
-## Personalizare
+## Customization
 
-- **Username GitHub**: în `index.html` înlocuiește `YOUR_GITHUB_USERNAME` cu username-ul tău (în toate linkurile către repo și subfoldere).
-- **Texte / secțiuni**: editează `index.html` și `styles.css` după preferințe.
-- **Alte pagini**: adaugă fișiere HTML în `docs/` și leagă-le din meniu sau din butoane.
+- **GitHub username**: in `index.html`, replace the username in the repo links if this repo is under a different account.
+- **Text / sections**: edit `index.html` and `styles.css` to your liking.
+- **Other pages**: add HTML files in `docs/` and link them from the nav or from buttons.
 
-## Rulare locală
+## Run locally
 
-Poți deschide `index.html` direct în browser sau folosi un server local, de exemplu:
+You can open `index.html` directly in the browser or use a local server, for example:
 
 ```bash
-# din folderul docs/
+# from the docs/ folder
 npx serve .
-# sau
+# or
 python -m http.server 8000
 ```
 
-Apoi deschizi în browser: `http://localhost:8000` (sau portul afișat).
+Then open in the browser: `http://localhost:8000` (or the port shown).
