@@ -34,3 +34,13 @@ Verify that a PUT request with one or more required fields missing from the body
 ## Automation Notes
 
 - Assert on status and error body. Use constants for field names. If API allows PATCH-style partial PUT, document and possibly skip this test.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-PUT-005 |
+| **Automated test (source)** | `PutMissingRequiredFieldsReturns400WithValidationErrorsTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/put-update/put_missing_required_fields_returns_400_with_validation_errors/` |

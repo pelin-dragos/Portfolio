@@ -35,3 +35,13 @@ Verify that a PUT request with a non-existent resource ID returns HTTP 404 Not F
 ## Automation Notes
 
 - Assert on status 404. Use a constant or stable non-existent ID. Do not use an ID that might exist in other environments.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-PUT-003 |
+| **Automated test (source)** | `PutNonexistentIdReturns404Test.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/put-update/put_nonexistent_id_returns_404/` |

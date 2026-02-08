@@ -33,3 +33,13 @@ Verify that a PUT request without valid authentication returns HTTP 401 Unauthor
 ## Automation Notes
 
 - Assert on status 401. Skip or tag when endpoint is not protected.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-PUT-007 |
+| **Automated test (source)** | `PutWithoutAuthReturns401WhenProtectedTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/put-update/put_without_auth_returns_401_when_protected/` |

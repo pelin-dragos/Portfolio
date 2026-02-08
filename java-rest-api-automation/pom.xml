@@ -156,6 +156,30 @@
                 </plugins>
             </build>
         </profile>
+        <!-- Run only put-update tests: mvn test -Pput-update-tests -->
+        <profile>
+            <id>put-update-tests</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <includes>
+                                <include>**/PutValidBodyExistingIdReturns200AndUpdatedResourceTest.java</include>
+                                <include>**/PutResponseContainsUpdatedFieldsAndValuesTest.java</include>
+                                <include>**/PutNonexistentIdReturns404Test.java</include>
+                                <include>**/PutInvalidIdFormatReturns400Or404Test.java</include>
+                                <include>**/PutMissingRequiredFieldsReturns400WithValidationErrorsTest.java</include>
+                                <include>**/PutInvalidFieldValuesReturns400WithValidationMessageTest.java</include>
+                                <include>**/PutWithoutAuthReturns401WhenProtectedTest.java</include>
+                                <include>**/PutWithValidAuthUpdatesResourceAndReturnsSuccessTest.java</include>
+                            </includes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
         <!-- Run only headers tests: mvn test -Pheaders-tests -->
         <profile>
             <id>headers-tests</id>

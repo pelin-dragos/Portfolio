@@ -36,3 +36,13 @@ Verify that a PUT request with valid authentication updates the resource and ret
 ## Automation Notes
 
 - Assert on status and optionally on response/GET body. Use auth from config; no hardcoded secrets.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-PUT-008 |
+| **Automated test (source)** | `PutWithValidAuthUpdatesResourceAndReturnsSuccessTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/put-update/put_with_valid_auth_updates_resource_and_returns_success/` |

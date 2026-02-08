@@ -35,3 +35,13 @@ Verify that the PUT update response body (when returned) contains the updated fi
 ## Automation Notes
 
 - Assert on key updated fields (e.g. title, status) using RestAssured path or DTO. Use test data for expected values.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-PUT-002 |
+| **Automated test (source)** | `PutResponseContainsUpdatedFieldsAndValuesTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/put-update/put_response_contains_updated_fields_and_values/` |

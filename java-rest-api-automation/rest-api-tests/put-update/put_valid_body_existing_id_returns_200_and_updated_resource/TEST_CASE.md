@@ -37,3 +37,13 @@ Verify that a PUT request with a valid full body and an existing resource ID ret
 ## Automation Notes
 
 - Assert on status 200 (or 204) and on response body when present. Use ID and body from test data or setup; teardown if resource must be removed.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-PUT-001 |
+| **Automated test (source)** | `PutValidBodyExistingIdReturns200AndUpdatedResourceTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/put-update/put_valid_body_existing_id_returns_200_and_updated_resource/` |

@@ -34,3 +34,13 @@ Verify that a PUT request with invalid field values (e.g. wrong type, invalid fo
 ## Automation Notes
 
 - Assert on status and error body. One invalid field per test. Use constants for invalid values.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-PUT-006 |
+| **Automated test (source)** | `PutInvalidFieldValuesReturns400WithValidationMessageTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/put-update/put_invalid_field_values_returns_400_with_validation_message/` |
