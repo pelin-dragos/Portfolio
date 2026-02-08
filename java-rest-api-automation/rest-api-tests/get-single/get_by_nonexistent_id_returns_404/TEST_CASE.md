@@ -34,3 +34,13 @@ Verify that a GET request to the resource-by-ID endpoint with a non-existent ID 
 ## Automation Notes
 
 - Assert on status 404 only, or also on error body structure if API defines it. Use a stable non-existent ID (constant or clearly out-of-range) to avoid flakiness.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-GET-SINGLE-003 |
+| **Automated test (source)** | `GetByNonexistentIdReturns404Test.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/get-single/get_by_nonexistent_id_returns_404/` |

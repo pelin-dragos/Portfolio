@@ -39,3 +39,13 @@ Verify that the GET resource-by-ID response contains the expected fields and tha
 
 - Use RestAssured matchers or JSON path to assert on field presence and type. Consider a shared schema or DTO for reuse.
 - Document expected fields in test data or constants; avoid scattering magic strings.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-GET-SINGLE-002 |
+| **Automated test (source)** | `GetByValidIdReturnsExpectedFieldsAndTypesTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/get-single/get_by_valid_id_returns_expected_fields_and_types/` |

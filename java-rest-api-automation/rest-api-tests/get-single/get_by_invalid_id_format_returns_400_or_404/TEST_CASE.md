@@ -33,3 +33,13 @@ Verify that when the resource ID in the path is in an invalid format (e.g. strin
 ## Automation Notes
 
 - Assert on status 400 or 404. Use a constant for the invalid ID value. Adapt to API behaviour (some APIs return 404 for any non-matching path value).
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-GET-SINGLE-004 |
+| **Automated test (source)** | `GetByInvalidIdFormatReturns400Or404Test.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/get-single/get_by_invalid_id_format_returns_400_or_404/` |

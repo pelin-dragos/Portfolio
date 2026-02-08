@@ -34,3 +34,13 @@ Verify that when the resource-by-ID endpoint requires authentication, a GET requ
 ## Automation Notes
 
 - Assert on status 401. Use auth from config; do not hardcode tokens. Skip or tag test when endpoint is not protected.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-GET-SINGLE-005 |
+| **Automated test (source)** | `GetByIdWithoutAuthReturns401WhenProtectedTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/get-single/get_by_id_without_auth_returns_401_when_protected/` |

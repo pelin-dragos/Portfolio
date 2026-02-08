@@ -108,6 +108,28 @@
                 </plugins>
             </build>
         </profile>
+        <!-- Run only get-single tests: mvn test -Pget-single-tests -->
+        <profile>
+            <id>get-single-tests</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <includes>
+                                <include>**/GetByValidIdReturns200AndCorrectBodyTest.java</include>
+                                <include>**/GetByValidIdReturnsExpectedFieldsAndTypesTest.java</include>
+                                <include>**/GetByNonexistentIdReturns404Test.java</include>
+                                <include>**/GetByInvalidIdFormatReturns400Or404Test.java</include>
+                                <include>**/GetByIdWithValidAuthReturns200AndDataTest.java</include>
+                                <include>**/GetByIdWithoutAuthReturns401WhenProtectedTest.java</include>
+                            </includes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
         <!-- Run only get-list tests: mvn test -Pget-list-tests -->
         <profile>
             <id>get-list-tests</id>

@@ -37,3 +37,13 @@ Verify that when the resource-by-ID endpoint requires authentication, a GET requ
 ## Automation Notes
 
 - Assert on status 200 and on body (ID and key fields). Use auth from config; no hardcoded secrets.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-GET-SINGLE-006 |
+| **Automated test (source)** | `GetByIdWithValidAuthReturns200AndDataTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/get-single/get_by_id_with_valid_auth_returns_200_and_data/` |

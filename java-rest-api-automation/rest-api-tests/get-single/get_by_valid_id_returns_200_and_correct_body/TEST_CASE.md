@@ -38,3 +38,13 @@ Verify that a GET request to the resource-by-ID endpoint with a valid existing I
 
 - Assert on status 200 and on body containing the expected ID and key fields. Use RestAssured path or JSON path for assertions.
 - Obtain ID from shared test data or setup; avoid hardcoded production IDs.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-GET-SINGLE-001 |
+| **Automated test (source)** | `GetByValidIdReturns200AndCorrectBodyTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/get-single/get_by_valid_id_returns_200_and_correct_body/` |
