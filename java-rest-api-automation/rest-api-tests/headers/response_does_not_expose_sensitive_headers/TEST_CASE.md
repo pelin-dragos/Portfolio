@@ -35,3 +35,13 @@ Verify that the API response does not expose sensitive or unnecessary headers (e
 ## Automation Notes
 
 - Assert on absence of configured headers (e.g. header list in config). If API always exposes some headers, mark test as documenting current behaviour or adjust policy. Optional test; may be N/A if no header policy is defined.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-HEADERS-003 |
+| **Automated test (source)** | `ResponseDoesNotExposeSensitiveHeadersTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/headers/response_does_not_expose_sensitive_headers/` |

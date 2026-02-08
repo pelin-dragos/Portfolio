@@ -36,3 +36,13 @@ Verify that when a request includes the header `Accept: application/json`, the A
 ## Automation Notes
 
 - Assert on Content-Type and on successful JSON parsing. Use RestAssured content-type and body parsing. Skip for endpoints that do not return JSON.
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-HEADERS-001 |
+| **Automated test (source)** | `RequestAcceptApplicationJsonReceivesJsonResponseTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/headers/request_accept_application_json_receives_json_response/` |

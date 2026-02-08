@@ -33,3 +33,13 @@ Verify that for endpoints that return a JSON body, the response includes a `Cont
 ## Automation Notes
 
 - Assert on response header `Content-Type` containing "application/json". Use RestAssured header extraction. Can be combined with a single success request (e.g. GET list).
+
+---
+
+## Traceability (automation)
+
+| Item | Location |
+|------|----------|
+| **Test Case ID** | API-HEADERS-002 |
+| **Automated test (source)** | `ResponseIncludesContentTypeApplicationJsonTest.java` (same folder) |
+| **Project path** | `java-rest-api-automation/rest-api-tests/headers/response_includes_content_type_application_json/` |
